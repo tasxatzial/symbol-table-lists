@@ -18,8 +18,7 @@ The following functions are provided:
 The tables are stored internally as Linked lists.
 Operations like 'get', 'put', 'remove', 'contains' run in O(n) time.
 
-For a more efficient implementation using Hash tables, see
-[symbol-table-hash](https://bitbucket.org/tasxatzial/symbol-table-hash).
+For a more efficient implementation using Hash tables, see [symbol-table-hash](https://github.com/tasxatzial/symbol-table-hash).
 
 ## Compile
 

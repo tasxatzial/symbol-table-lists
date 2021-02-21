@@ -1,6 +1,6 @@
-# Description
+# Symbol tables library
 
-Library for creating and using [Symbol tables](https://en.wikipedia.org/wiki/Symbol_table).
+Library for creating and using [Symbol tables](https://en.wikipedia.org/wiki/Symbol_table)  (lists based implementation).
 
 The following functions are provided:
 
@@ -32,13 +32,13 @@ make symtablelist.o
 
 ### Building the test files
 
-Using the library is demonstrated in [testsymtab.c](testsymtab.c). Build the tests with:
+Using the library is demonstrated in [testsymtab.c](testsymtab.c).
+
+Build:
 
 ```bash
 make list
 ```
-
-Running the tests is explained in the next section.
 
 ## Typical usage
 

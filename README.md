@@ -32,7 +32,7 @@ make symtablelist.o
 
 ### Building the test files
 
-Using the library is demonstrated in [testsymtab.c](testsymtab.c).
+Using the library is demonstrated in [testsymtab.c](src/testsymtab.c).
 
 Build:
 
@@ -42,7 +42,7 @@ make list
 
 ## Typical usage
 
-The predefined tests in [testsymtab.c](testsymtab.c) create tables and insert random (keys, values). The following are always true:
+The predefined tests in [testsymtab.c](src/testsymtab.c) create tables and insert random (keys, values). The following are always true:
 
 1. Values are always integers > 0.
 2. Changing a value simply means adding 2 to it.

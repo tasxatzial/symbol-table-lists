@@ -1,10 +1,10 @@
 CFLAGS = -c -Wall -ansi -pedantic
 
-list: testsymtab.o symtablelist.o
-	gcc testsymtab.o symtablelist.o -o list
+list: runsymtab.o symtablelist.o
+	gcc runsymtab.o symtablelist.o -o list
 
-testsymtab.o: testsymtab.c symtable.h
-	gcc $(CFLAGS) testsymtab.c
+runsymtab.o: runsymtab.c symtable.h
+	gcc $(CFLAGS) runsymtab.c
 
 symtablelist.o: symtablelist.c symtable.h
 	gcc $(CFLAGS) symtablelist.c

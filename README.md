@@ -1,6 +1,6 @@
 # Symbol tables library
 
-Library for creating and using [Symbol tables](https://en.wikipedia.org/wiki/Symbol_table)  (list based implementation).
+Create and use [Symbol tables](https://en.wikipedia.org/wiki/Symbol_table)  (list based implementation).
 
 The following functions are provided:
 
@@ -15,19 +15,17 @@ The following functions are provided:
 
 ## Implementation
 
-The library provides an [opaque data type](https://en.wikipedia.org/wiki/Opaque_data_type) for the table that can be used with the above functions. The representation of the type is completely hidden from its users. C-strings are supported as keys but values can be of any type, therefore the table is used to store only pointers to values.
+The library exposes the symbol table as an [opaque data type](https://en.wikipedia.org/wiki/Opaque_data_type).
 
-The tables are internally stored as linked lists. Operations like 'get', 'put', 'remove', 'contains' run in O(n) time.
+C-strings are supported as keys and are stored directly in the table. Values can be of any type, therefore they should already be stored in a different data structure.
+
+Internally the symbol tables are stored as linked lists. Operations like 'get', 'put', 'remove', 'contains' run in O(list length) time.
 
 For a more efficient implementation using Hash tables, see [symbol-table-hash](https://github.com/tasxatzial/symbol-table-hash).
 
-## Profiling
-
-The program has been tested for memory leaks with [valgrind](https://valgrind.org/) and [AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer).
-
 ## Compile
 
-Build the library:
+Build the library (functions declared in symtable.h):
 
 ```bash
 make symtablelist.o
@@ -67,3 +65,7 @@ Run:
 ```bash
 ./list 10 5 abcde 2
 ```
+
+## Profiling
+
+'list' has been tested for memory leaks with [valgrind](https://valgrind.org/) and [AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer).

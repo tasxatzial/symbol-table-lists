@@ -1,6 +1,6 @@
 # Symbol tables library
 
-Create and use [Symbol tables](https://en.wikipedia.org/wiki/Symbol_table)  (list based implementation).
+A simple library for [Symbol tables](https://en.wikipedia.org/wiki/Symbol_table). The implementation is based on **linked lists**.
 
 The following functions are provided:
 
@@ -15,17 +15,17 @@ The following functions are provided:
 
 ## Implementation
 
-The library exposes the symbol table as an [opaque data type](https://en.wikipedia.org/wiki/Opaque_data_type).
+The symbol table is defined as an [opaque data type](https://en.wikipedia.org/wiki/Opaque_data_type).
 
 C-strings are supported as keys and are stored directly in the table. Values can be of any type, therefore they should already be stored in a different data structure.
 
-Internally the symbol tables are stored as linked lists. Operations like 'get', 'put', 'remove', 'contains' run in O(list length) time.
+Internally the symbol tables are stored as linked lists. Operations like 'get', 'put', 'remove', 'contains' run in O(list_length) time.
 
 For a more efficient implementation using Hash tables, see [symbol-table-hash](https://github.com/tasxatzial/symbol-table-hash).
 
 ## Compile
 
-Build the library (functions declared in symtable.h):
+Build the library (functions declared in [symtable.h](src/symtable.h)):
 
 ```bash
 make symtablelist.o
@@ -41,12 +41,12 @@ Build:
 make list
 ```
 
-The predefined demo creates tables and inserts random (key, value) pairs. More specifically:
+The demo creates tables and inserts random (key, value) pairs. More specifically:
 
 1. Values are always integers > 0.
 2. Changing a value means adding 2 to it.
 
-By default all operations are performed on one table. This can be alterned by changing the NTABLES constant. There is also the option to show all intermediate results by changing the DEBUG constant to 1.
+By default all operations are performed on one table. This can be altered by changing the NTABLES constant. There is also the option to show all intermediate results by changing the DEBUG constant to 1.
 
 ### Example
 
